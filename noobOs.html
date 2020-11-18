@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>noobOs</title>
+        <link rel="stylesheet" href="noobOs.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script type="text/javascript" src="noobOs.js" async></script>
+    </head>
+  <body">
+    
+    <div id="boot">
+
+        <!--Boot Image-->
+        <img src="bootLogo.png" alt="">
+        <label>Noob Os</label>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--make fullscreen-->
+        <button onclick="goToLoading()" id="getStarted">Get Started</button>
+
+        <!--Boot Loading-->
+        <div id="load">
+
+        </div>
+    </div>
+
+
+
+    <!-- Main Background / Wallpaper / All Container-->
+    <div id="deskTop">
+
+        <!--Settings App-->
+        <div id="settings" onclick="openWindow('computer')">
+            <label class="material-icons" style="font-size: 300%; cursor: pointer;">personal_video</label>
+        </div>
+        <label style="margin-left: 1.5%; text-align: center; color: #ced6e0; font-family: sans-serif;">Computer</label>
+        
+
+        <br><br>
+
+        <!--Default Browser App-->
+        <div id="browser" onclick="openWindow('browser')">
+            <label class="material-icons" style="font-size: 300%; cursor: pointer;">public</label>
+        </div>
+        <label style="margin-left: 1.9%; text-align: center; color: #ced6e0; font-family: sans-serif;">Browser</label>
+
+        <br><br>
+
+        <!--My App-->
+        <div id="browser" onclick="openWindow('store')">
+            <label class="material-icons" style="font-size: 300%; cursor: pointer;">store</label>
+        </div>
+        <label style="margin-left: 1.6%; text-align: center; color: #ced6e0; font-family: sans-serif;">App Store</label>
+    </div>
+
+
+    <!-- Brightness Controller Div-->
+    <div id="brightness">
+
+    </div>
+
+
+    <!-- Default Browser Window-->
+    <div id="browserWindow">
+        <div id="bWindowTitle">
+            <!--Search Bar-->
+            <input type="textbox" id="browserUrl" onkeypress="searchBar(event)" placeholder="www.bing.com" style="margin-right: 2%; border-radius: 10px; width: 50%; padding-left: 1%; font-size: 110%;">
+
+            <!-- Maximize Default Browser Window Button-->
+            <button onclick="openWindow('maxBrowser')" style="background-color: grey; border: grey solid 2px;align-self: center; padding-left: 2%; padding-right: 2%;padding-top: 1%; padding-bottom: 1%; margin-right: 1%; color: white; font-size: 110%; transform: rotate(0deg);" class="material-icons">content_copy</button>
+            
+            <!--Close Default Browser Window Button-->
+            <button onclick="openWindow('clBrowser')">x</button>
+        </div>
+
+        <!--Show Contents in default browser-->
+        <iframe id="browserDisplay" src="https://www.bing.com"></iframe>
+    </div>
+
+
+
+    <!--My Computers-->
+    <div id="fileWindow">
+        <div id="fWindowTitle">
+
+            <!-- Maximize Default Browser Window Button-->
+            <button onclick="openWindow('maxFile')" style="background-color: grey; border: grey solid 2px;align-self: center; padding-left: 2%; padding-right: 2%;padding-top: 1%; padding-bottom: 1%; margin-right: 1%; color: white; font-size: 110%; transform: rotate(0deg);" class="material-icons">content_copy</button>
+            
+            <!--Close Default Browser Window Button-->
+            <button onclick="openWindow('clFile')">x</button>
+        </div>
+
+        <!-- File Body Mother-->
+        <div id="fileBody">
+
+            <!--File Body Options-->
+            <div id="fileLeft">
+                <button id="sysShowBtn" onclick="showFile('showSys')">System</button>
+                <button onclick="showFile('showWall')">Wallpaper</button>
+                <button>Theme</button>
+                <button onclick="showFile('showBright')">Brightness</button>
+            </div>
+            
+            <!-- File Body Content-->
+            <div id="fileRight">
+
+                <!--Change Wallpaper Division-->
+                <div id="wallDiv">
+                    
+                    <img id="wallPreview" src="wallpaper1.png" alt="Image Corrupted">
+
+                    <div style="position: relative; height: 7%; flex-direction: row; justify-content: center; align-items: flex-start; margin-top: 10%;">
+                        <input id="wallUrl" oninput="previewWall()" type="textbox" placeholder="Paste Image URL" style="width: 50%; height: 100%; font-size: 150%; padding-left: 1%;">
+                        &nbsp;
+
+                        <button onclick="setWall('new')" style="height: auto; width: auto; font-size: 150%; padding-right: 5%; padding-left: 5%; background-color: #2ed573; border: solid #2ed573 2px; color: white; cursor: pointer; padding-top: 1%; padding-bottom: 1%; align-self: center;">Set</button>
+                        &nbsp;&nbsp;
+
+                        <label onclick="setWall('default')" style="height: 100%; font-size: 200%; background-color: transparent; border: black solid 0px; cursor: pointer; text-align: center; color: #5352ed; display: flex; justify-content: center; align-items: center;" class="material-icons">restore</label>
+                    </div>
+                </div>
+
+
+                <!-- System Specifications Div-->
+                <div id="sysDiv" style="position: absolute;">
+                    
+                    <label class="material-icons" style="margin-top: 5%; font-size: 200px; background-color: transparent; border: solid transparent 0px; color: teal;">account_circle</label>
+                    <label style="color:black; font-family: monospace; font-size: 220%;">Admin</label>
+                    <br>
+                    <br>
+                    <hr style="background-color: whitesmoke; height: 0.1%; width: 100%; border: solid whitesmoke 0px;">
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>

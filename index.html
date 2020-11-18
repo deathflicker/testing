@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            NoobOs
+        </title>
+        <style>
+            body{
+                background-color: black;
+                color: darkslategrey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body scroll="no" style="overflow: hidden">
+        <meta 
+             name='viewport' 
+             content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+        />
+        <img id="logo" src="mainLogo.png" alt="NOOB">
+        <br>
+        <br>
+        <label id="output" style="font-family: 'Courier New', Courier, monospace;
+        font-size: 100%; color: white; max-width: 90%;"><a style="color: #e74c3c;">Check</a>ing Brow<a style="color: #e74c3c;">ser</a>...</label>
+        
+    </body>
+
+
+    <script type="text/javascript">
+        
+        let output = document.getElementById('output');
+        let logo = document.getElementById('logo');
+        
+
+        function checkBrowser(){
+            if(window.innerWidth>=1152)
+            {
+                window.location.href='noobOs.html';
+            }
+            else
+            {
+                logo.style.display='none';
+                output.style.fontSize = '150%';
+                output.textContent = 'OOPS! You are not on a Windows or Mac. noobOs is not made for mobile devices.';
+            }
+        }
+
+        setTimeout(checkBrowser, 1000);
+
+    </script>
+</html>

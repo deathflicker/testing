@@ -1,0 +1,9 @@
+Settings => (brightness, Wallpaper, System specs, Apps , About , Theme , FAQ)
+Browser
+Text Editor
+Gallery / image editor
+calculator
+music player
+video player
+command line
+app store
